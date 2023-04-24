@@ -1,0 +1,302 @@
+Initial value of the log posterior (or likelihood) -16067754.5473
+
+==========================================================
+   Change in the posterior covariance matrix = 359.04.
+   Change in the posterior mean = 52.3518.
+   Mode improvement = 16065642.1004
+   New value of jscale = 0.0054838
+==========================================================
+
+==========================================================
+   Change in the posterior covariance matrix = 72.6014.
+   Change in the posterior mean = 24.6529.
+   Mode improvement = 48345.3088
+   New value of jscale = 0.00028177
+==========================================================
+
+==========================================================
+   Change in the posterior covariance matrix = 0.033355.
+   Change in the posterior mean = 17.385.
+   Mode improvement = 21745.0351
+   New value of jscale = 0.020045
+==========================================================
+
+Optimal value of the scale parameter = 0.020045
+
+
+Final value of minus the log posterior (or likelihood)28712.720593 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+          prior mean     mode    s.d. prior pstdev
+
+rho_ee_z      0.800   0.6305  0.0005 beta  0.1000 
+rho_ee_j      0.800   0.7912  0.0000 beta  0.1000 
+rho_me        0.800   0.8014  0.0000 beta  0.1000 
+rho_mi        0.800   0.9841  0.0010 beta  0.1000 
+rho_mk_d      0.800   0.8711  0.0002 beta  0.1000 
+rho_mk_bh     0.800   0.8584  0.0004 beta  0.1000 
+rho_mk_be     0.800   0.9996  0.0000 beta  0.1000 
+rho_A_e       0.800   0.7530  0.0002 beta  0.1000 
+rho_ee_qk     0.800   0.7468  0.0005 beta  0.1000 
+rho_eps_y     0.800   0.8854  0.0003 beta  0.1000 
+rho_eps_l     0.800   0.9180  0.0006 beta  0.1000 
+rho_eps_K_b   0.800   0.4698  0.0006 beta  0.1000 
+rho_vi        0.500   0.9529  0.0012 beta  0.1000 
+kappa_p      50.000  72.7461  0.0593 gamm  20.0000 
+kappa_w      50.000 137.4735  0.3149 gamm  20.0000 
+kappa_i       2.500   0.4685  0.0051 gamm  1.0000 
+kappa_d      10.000   8.5863  0.0149 gamm  2.5000 
+kappa_be      3.000   3.9555  0.0047 gamm  2.5000 
+kappa_bh      6.000   9.4477  0.0016 gamm  2.5000 
+kappa_kb     10.000  10.0291  0.0004 gamm  5.0000 
+phi_pie       2.000   3.0083  0.0004 gamm  0.5000 
+rho_ib        0.500   0.3420  0.0005 beta  0.1500 
+phi_y         0.100  -0.2660  0.0008 norm  0.1500 
+ind_p         0.500   0.6454  0.0002 beta  0.1500 
+ind_w         0.500   0.6364  0.0001 beta  0.1500 
+a_i           0.500   0.6267  0.0005 beta  0.1000 
+
+standard deviation of shocks
+          prior mean     mode    s.d. prior pstdev
+
+e_z           0.010   0.0319  0.0001 invg  0.0500 
+e_j           0.010   0.3167  0.0009 invg  0.0500 
+e_me          0.010   0.0345  0.0001 invg  0.0500 
+e_mi          0.010   0.1000  0.0004 invg  0.0500 
+e_mk_d        0.010   0.2828  0.0009 invg  0.0500 
+e_mk_bh       0.010   0.3269  0.0012 invg  0.0500 
+e_mk_be       0.010   0.0253  0.0001 invg  0.0500 
+e_A_e         0.010   0.0479  0.0002 invg  0.0500 
+e_qk          0.010   0.1861  0.0003 invg  0.0500 
+e_r_ib        0.010   0.0157  0.0000 invg  0.0500 
+e_y           1.000   1.2293  0.0008 invg  0.0500 
+e_l           0.400   0.3545  0.0005 invg  0.0500 
+e_eps_K_b     0.050   0.0270  0.0002 invg  0.0500 
+e_vi          0.010   0.0366  0.0004 invg  0.0500 
+
+
+Log data density [Laplace approximation] is -29127.565450.
+
+Estimationmcmc Multiple chains mode.
+Estimationmcmc Searching for initial values...
+Estimationmcmc Initial values found!
+
+Estimationmcmc Write details about the MCMC... Ok!
+Estimationmcmc Details about the MCMC are available in gerali_reestimatRO3metropolisgerali_reestimatRO3_mh_history_0.mat
+
+
+Estimationmcmc Number of mh files 1 per block.
+Estimationmcmc Total number of generated files 10.
+Estimationmcmc Total number of iterations 100000.
+Estimationmcmc Current acceptance ratio per chain 
+                                                       Chain  1 32.791%
+                                                       Chain  2 32.566%
+                                                       Chain  3 33.001%
+                                                       Chain  4 33.122%
+                                                       Chain  5 32.992%
+                                                       Chain  6 32.376%
+                                                       Chain  7 32.875%
+                                                       Chain  8 33.086%
+                                                       Chain  9 32.952%
+                                                       Chain 10 32.88%
+Estimationmcmc Total number of MH draws per chain 100000.
+Estimationmcmc Total number of generated MH files 1.
+Estimationmcmc I'll use mh-files 1 to 1.
+Estimationmcmc In MH-file number 1 I'll start at line 50001.
+Estimationmcmc Finally I keep 50000 draws per chain.
+
+
+
+MCMC Inefficiency factors per block
+Parameter          Block 1     Block 2     Block 3     Block 4     Block 5     Block 6     Block 7     Block 8     Block 9    Block 10
+SE_e_z             733.058     740.300     741.738     739.648     742.413     740.207     728.932     737.229     729.060     742.556
+SE_e_j             716.268     737.209     737.587     723.440     741.864     737.786     720.857     734.825     689.215     741.192
+SE_e_me            736.205     679.648     732.960     736.186     726.408     702.437     737.857     731.206     689.583     732.891
+SE_e_mi            737.424     736.744     728.870     736.352     729.929     690.181     737.772     693.124     735.888     719.448
+SE_e_mk_d          723.283     729.251     728.474     653.271     741.144     731.781     677.423     713.612     687.126     732.109
+SE_e_mk_bh         726.036     738.742     737.643     737.380     741.064     735.853     734.816     733.713     732.771     740.409
+SE_e_mk_be         737.629     740.392     740.056     740.303     740.547     738.237     739.555     737.341     740.385     740.665
+SE_e_A_e           738.714     740.554     740.598     740.237     740.496     737.438     740.594     738.114     740.325     740.242
+SE_e_qk            739.392     740.450     738.207     739.388     738.058     736.335     741.927     736.199     740.090     737.836
+SE_e_r_ib          738.811     740.540     739.940     740.647     741.394     739.146     738.136     738.907     739.957     739.790
+SE_e_y             734.525     739.021     740.374     740.323     740.408     737.856     735.617     733.866     734.736     739.045
+SE_e_l             739.135     741.072     738.719     740.012     739.334     737.622     740.483     736.191     739.681     738.048
+SE_e_eps_K_b       739.144     741.108     737.877     740.230     739.230     735.448     741.832     737.194     740.200     738.464
+SE_e_vi            738.881     741.310     738.947     739.989     739.854     737.340     741.111     736.898     739.811     738.552
+rho_ee_z           739.752     739.989     734.813     738.107     705.638     732.658     740.050     735.195     738.669     727.767
+rho_ee_j           740.443     741.331     735.821     739.307     735.228     739.792     739.033     737.679     739.203     735.752
+rho_me             718.843     729.082     739.175     738.851     733.077     739.880     724.261     738.748     736.688     694.346
+rho_mi             738.502     741.080     740.407     741.091     741.726     739.331     738.949     737.382     738.914     740.112
+rho_mk_d           738.823     739.924     738.905     738.720     739.155     737.269     740.230     735.742     739.430     739.703
+rho_mk_bh          739.016     741.130     739.077     740.189     740.791     737.968     740.057     734.876     739.236     738.720
+rho_mk_be          732.521     740.230     728.300     741.974     742.741     728.456     727.046     711.825     739.717     739.709
+rho_A_e            739.036     737.365     731.573     736.978     733.341     720.526     739.720     732.684     737.999     716.867
+rho_ee_qk          738.632     740.751     738.787     739.650     739.474     734.803     741.949     735.318     739.707     738.878
+rho_eps_y          739.418     741.331     738.706     740.026     739.366     740.190     738.356     737.732     738.645     736.574
+rho_eps_l          739.080     700.734     714.242     729.934     706.404     728.002     730.087     723.352     734.218     721.835
+rho_eps_K_b        739.610     740.042     734.111     738.261     729.570     731.630     741.551     731.974     739.388     733.066
+rho_vi              13.099      14.440      13.119      13.281      12.748      13.187      10.201      13.615      12.711      11.276
+kappa_p            739.455     740.875     736.226     738.541     730.726     735.946     740.773     736.009     739.222     733.068
+kappa_w            738.909     741.190     739.589     740.203     740.486     739.270     739.367     737.785     739.035     739.396
+kappa_i            740.271     740.662     738.018     737.966     737.094     741.885     731.624     737.149     738.497     735.116
+kappa_d            737.181     739.867     737.114     738.140     739.050     731.615     741.434     735.247     740.357     737.453
+kappa_be           723.378     735.881     689.353     673.528     740.490     732.871     723.549     729.870     676.853     739.712
+kappa_bh           738.830     741.109     739.841     739.777     740.176     737.348     741.018     736.323     740.337     739.564
+kappa_kb           737.694     740.852     740.826     739.852     741.446     738.024     740.141     737.977     738.819     738.977
+phi_pie            740.161     727.998     733.884     735.110     733.311     733.098     731.746     724.420     737.122     701.761
+rho_ib             735.108     740.519     740.468     737.607     741.780     739.921     733.870     732.414     735.564     741.333
+phi_y              734.074     739.814     740.457     739.176     741.593     737.181     738.986     736.557     736.021     741.712
+ind_p              738.989     737.287     732.111     736.121     722.318     718.521     740.544     723.853     738.096     719.561
+ind_w              739.674     735.569     732.915     736.117     719.182     728.414     738.166     710.952     735.203     720.841
+a_i                722.985     738.651     735.097     727.808     742.315     738.060     723.539     733.926     700.030     742.589
+
+Estimationmcmcdiagnostics Univariate convergence diagnostic, Brooks and Gelman (1998)
+    Parameter 1...  Done! 
+    Parameter 2...  Done! 
+    Parameter 3...  Done! 
+    Parameter 4...  Done! 
+    Parameter 5...  Done! 
+    Parameter 6...  Done! 
+    Parameter 7...  Done! 
+    Parameter 8...  Done! 
+    Parameter 9...  Done! 
+    Parameter 10...  Done! 
+    Parameter 11...  Done! 
+    Parameter 12...  Done! 
+    Parameter 13...  Done! 
+    Parameter 14...  Done! 
+    Parameter 15...  Done! 
+    Parameter 16...  Done! 
+    Parameter 17...  Done! 
+    Parameter 18...  Done! 
+    Parameter 19...  Done! 
+    Parameter 20...  Done! 
+    Parameter 21...  Done! 
+    Parameter 22...  Done! 
+    Parameter 23...  Done! 
+    Parameter 24...  Done! 
+    Parameter 25...  Done! 
+    Parameter 26...  Done! 
+    Parameter 27...  Done! 
+    Parameter 28...  Done! 
+    Parameter 29...  Done! 
+    Parameter 30...  Done! 
+    Parameter 31...  Done! 
+    Parameter 32...  Done! 
+    Parameter 33...  Done! 
+    Parameter 34...  Done! 
+    Parameter 35...  Done! 
+    Parameter 36...  Done! 
+    Parameter 37...  Done! 
+    Parameter 38...  Done! 
+    Parameter 39...  Done! 
+    Parameter 40...  Done! 
+
+Estimationmarginal density I'm computing the posterior mean and covariance...  Done!
+Estimationmarginal density I'm computing the posterior log marginal density (modified harmonic mean)... 
+Estimationmarginal density The support of the weighting density function is not large enough...
+Estimationmarginal density I increase the variance of this distribution.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+
+Estimationmarginal density Let me try again.
+Estimationmarginal density There's probably a problem with the modified harmonic mean estimator.
+
+
+ESTIMATION RESULTS
+
+Log data density is -Inf.
+
+parameters
+              prior mean   post. mean        90% HPD interval    prior       pstdev
+
+rho_ee_z           0.800       0.6325      0.6315      0.6333   beta        0.1000
+rho_ee_j           0.800       0.7913      0.7912      0.7913   beta        0.1000
+rho_me             0.800       0.8015      0.8014      0.8015   beta        0.1000
+rho_mi             0.800       0.9862      0.9855      0.9868   beta        0.1000
+rho_mk_d           0.800       0.8719      0.8716      0.8722   beta        0.1000
+rho_mk_bh          0.800       0.8565      0.8560      0.8573   beta        0.1000
+rho_mk_be          0.800       0.9995      0.9994      0.9996   beta        0.1000
+rho_A_e            0.800       0.7519      0.7513      0.7526   beta        0.1000
+rho_ee_qk          0.800       0.7453      0.7447      0.7458   beta        0.1000
+rho_eps_y          0.800       0.8867      0.8862      0.8871   beta        0.1000
+rho_eps_l          0.800       0.9177      0.9176      0.9179   beta        0.1000
+rho_eps_K_b        0.800       0.4721      0.4710      0.4731   beta        0.1000
+rho_vi             0.500       0.9528      0.9528      0.9529   beta        0.1000
+kappa_p           50.000      72.2666     72.0913     72.4919   gamm       20.0000
+kappa_w           50.000     138.2809    138.0299    138.5348   gamm       20.0000
+kappa_i            2.500       0.4775      0.4747      0.4811   gamm        1.0000
+kappa_d           10.000       8.5585      8.5485      8.5694   gamm        2.5000
+kappa_be           3.000       3.9541      3.9512      3.9560   gamm        2.5000
+kappa_bh           6.000       9.4103      9.3970      9.4241   gamm        2.5000
+kappa_kb          10.000      10.0334     10.0318     10.0349   gamm        5.0000
+phi_pie            2.000       3.0068      3.0055      3.0080   gamm        0.5000
+rho_ib             0.500       0.3427      0.3424      0.3430   beta        0.1500
+phi_y              0.100      -0.2676     -0.2681     -0.2669   norm        0.1500
+ind_p              0.500       0.6437      0.6428      0.6450   beta        0.1500
+ind_w              0.500       0.6359      0.6355      0.6363   beta        0.1500
+a_i                0.500       0.6273      0.6269      0.6278   beta        0.1000
+
+standard deviation of shocks
+              prior mean   post. mean        90% HPD interval    prior       pstdev
+
+e_z                0.010       0.0316      0.0313      0.0317   invg        0.0500
+e_j                0.010       0.3172      0.3169      0.3176   invg        0.0500
+e_me               0.010       0.0345      0.0345      0.0346   invg        0.0500
+e_mi               0.010       0.1004      0.1001      0.1007   invg        0.0500
+e_mk_d             0.010       0.2830      0.2828      0.2834   invg        0.0500
+e_mk_bh            0.010       0.3279      0.3275      0.3282   invg        0.0500
+e_mk_be            0.010       0.0258      0.0256      0.0259   invg        0.0500
+e_A_e              0.010       0.0489      0.0486      0.0492   invg        0.0500
+e_qk               0.010       0.1849      0.1844      0.1854   invg        0.0500
+e_r_ib             0.010       0.0158      0.0158      0.0158   invg        0.0500
+e_y                1.000       1.2299      1.2297      1.2301   invg        0.0500
+e_l                0.400       0.3530      0.3525      0.3536   invg        0.0500
+e_eps_K_b          0.050       0.0284      0.0279      0.0289   invg        0.0500
+e_vi               0.010       0.0382      0.0377      0.0387   invg        0.0500
+Estimationmcmc Smoothed variables
+Estimationmcmc Smoothed variables, done!
+Estimationmcmc Smoothed shocks
+Estimationmcmc Smoothed shocks, done!
+Estimationmcmc Trend_coefficients
+Estimationmcmc Trend_coefficients, done!
+Estimationmcmc Smoothed constant
+Estimationmcmc Smoothed constant, done!
+Estimationmcmc Smoothed trend
+Estimationmcmc Smoothed trend, done!
+Estimationmcmc Updated Variables
+Estimationmcmc Updated Variables, done!
+Estimationmcmc One step ahead forecast (filtered variables)
+Estimationmcmc One step ahead forecast (filtered variables), done!
+Total computing time  6h35m58s
+Note warning(s) encountered in MATLABOctave code
+ 
