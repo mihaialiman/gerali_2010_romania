@@ -142,9 +142,9 @@ phi          = 7.822;                                                        % i
 m_i_ss       = 0.71  ;                                                      % loan-to-value ratio impatient households
 m_e_ss       = 0.35 ;                                                      % loan-to-value ratio entrepreneurs
 alpha        = 0.55;                                                      % capital share in the production function
-eps_d        = -1.05;                                                   % elast. of subst. of deposits 
-eps_bh       = 1.454545455;
-eps_be       = 1.367647059;  
+eps_d        = -1.362400844;                                                   % elast. of subst. of deposits 
+eps_bh       = 6.785728165;
+eps_be       = 1.653421891; 
  
 mk_d_ss      = eps_d   / (eps_d  - 1) ;                                    % steady state markdown on D (ok if eps_d<0; if eps_d>0 it should be eps_d/(eps_d+1) )
 mk_bh_ss     = eps_bh  / (eps_bh - 1) ;                                    % steady state markup on loans to I
@@ -167,7 +167,7 @@ r_k_ss       = -(1-deltak)-m_e_ss*(1-deltak)*piss/beta_e*
                                                          % fixed supply housing
 eksi_1       = r_k_ss;                                                     % capital utilization cost parameter
 eksi_2       = 0.1*r_k_ss;                                                 % capital utilization cost parameter
-vi_ss=0.16;                                                                % Banking Capital ratio over Loans (BaselII)
+vi_ss=0.18;                                                                % Banking Capital ratio over Loans (BaselII)
 eps_b        = mean([eps_bh,eps_be]);
 % delta_kb     = r_ib_ss/vi * (eps_d - eps_b + vi*(eps_b-1))/((eps_b-1)*(eps_d-1));  % j_B with terms in r_ib                            
 delta_kb     = r_ib_ss/vi_ss * (eps_d - eps_b + vi_ss*eps_d*(eps_b-1))/((eps_b-1)*(eps_d-1));                               
@@ -177,45 +177,45 @@ ind_be       = 0.0;                   % indexation rates on loans to firms
 ind_bh       = 0.0;                   % indexation rates on loans to households
 
 
-deltah=0.025;
+deltah=0.01;
 
 % *****************************************************************
 % LOADING MEDIAN OF POSTERIOR: USES EXTRACT_MEDIAN_FROM_POSTERIOR.m (dummy way)
 % *****************************************************************
 
-load median_valuesRO.txt;
-coeffs = median_valuesRO;
+load median_valuesROh.txt;
+coeffs = median_valuesROh;
 
 rho_ee_z	=	coeffs(1);  % 0.385953438168178	;
-rho_A_e     =	coeffs(2);  % 0.93816527333294	;
-rho_ee_j	=	coeffs(3);  % 0.921872719102206	;
-rho_me      =	coeffs(4);  % 0.90129485520182	;
-rho_mi      =	coeffs(5);  % 0.922378382753078	;
-rho_mk_d	=	coeffs(6);  % 0.892731352899547	;
-rho_mk_bh	=	coeffs(7);  % 0.851229673864555	;
-rho_mk_be	=	coeffs(8);  % 0.873901213475799	;
+rho_ee_j     =	coeffs(2);  % 0.93816527333294	;
+rho_me	=	coeffs(3);  % 0.921872719102206	;
+rho_mi      =	coeffs(4);  % 0.90129485520182	;
+rho_mk_d      =	coeffs(5);  % 0.922378382753078	;
+rho_mk_bh	=	coeffs(6);  % 0.892731352899547	;
+rho_mk_be	=	coeffs(7);  % 0.851229673864555	;
+rho_A_e	=	coeffs(8);  % 0.873901213475799	;
 rho_ee_qk	=	coeffs(9);  % 0.571692383714171	;
 rho_eps_y	=	coeffs(10); % 0.294182239567384	;
 rho_eps_l	=	coeffs(11); % 0.596186440884132	;
 rho_eps_K_b	=	coeffs(12); % 0.813022758608552	;
-kappa_p     =	coeffs(13); % 33.7705265016395	;
-kappa_w     =	coeffs(14); % 107.352040072465	;
-kappa_i     =	coeffs(15); % 10.0305562248008	;
-kappa_d     =	coeffs(16); % 2.77537377104213	;
-kappa_be	=	coeffs(17); % 7.98005959044637	;
-kappa_bh	=	coeffs(18); % 9.04426718749482	;
-kappa_kb	=	coeffs(19); % 8.91481958034669	;
-phi_pie     =	coeffs(20); % 2.00384780180824  ;
-rho_ib      =	coeffs(21); % 0.750481873084311	;
-phi_y       =	coeffs(22); % 0.303247771697294	;
-ind_p       =	coeffs(23); % 0.158112794106546	;
-ind_w       =	coeffs(24); % 0.300197804017489	;
-a_i	        =	coeffs(25); % 0.867003766306404	;
+rho_vi     =	coeffs(13); % 33.7705265016395	;
+rho_ee_qh     =	coeffs(14); % 107.352040072465	;
+kappa_p     =	coeffs(15); % 10.0305562248008	;
+kappa_w     =	coeffs(16); % 2.77537377104213	;
+kappa_i	=	coeffs(17); % 7.98005959044637	;
+kappa_d	=	coeffs(18); % 9.04426718749482	;
+kappa_be	=	coeffs(19); % 8.91481958034669	;
+kappa_bh     =	coeffs(20); % 2.00384780180824  ;
+kappa_kb      =	coeffs(21); % 0.750481873084311	;
+kappa_ih       =	coeffs(22); % 0.303247771697294	;
+phi_pie       =	coeffs(23); % 0.158112794106546	;
+rho_ib       =	coeffs(24); % 0.300197804017489	;
+phi_y	        =	coeffs(25); % 0.867003766306404	;
 a_e         =   0.0     ;   % degree of habit formation: entrepreneurs
 a_p         =   0.0     ;   % degree of habit formation: patient households
-rho_vi=coeffs(26);
-rho_ee_qh=0.5;
-kappa_ih=10;        
+ind_p=coeffs(25);
+ind_w=coeffs(26);
+a_i=coeffs(27);     
 //%------------------------------------------------------------
 //% Model equations
 //%------------------------------------------------------------
@@ -233,7 +233,7 @@ loansH = BH*100;
 loansF = BE*100;
 output     = Y1*100; 
 consumption = C*100;
-investment = I*100;   
+investment = (I+I_h)*100;   
 deposits = D*100;
 interestDep = 400*(exp(r_d));
 bankcapital = 100*K_b;                           
@@ -247,7 +247,7 @@ bankcapital = 100*K_b;
 
   (1-a_i)*exp(ee_z)*(exp(c_p) - a_i*exp(c_p(-1)))^(-1) = exp(lam_p); // CON rescaling  (1) where a_p = a_e = a_i
 
-j * (exp(ee_j))  / exp(h_p) - exp(lam_p) * exp(q_h) + beta_p * exp(lam_p(+1)) * exp(q_h(+1))   = 0; // (2) 
+j * (exp(e))  / exp(h_p) - exp(lam_p) * exp(q_h) + beta_p * exp(lam_p(+1)) * exp(q_h(+1))   = 0; // (2) 
 
 exp(lam_p)  = beta_p * exp(lam_p(+1)) * (1+exp(r_d)) / exp(pie(+1)); // (3)
 
@@ -316,7 +316,7 @@ exp(r_k) = alpha * exp(A_e) * exp(u)^(alpha-1) * exp(k_e(-1))^(alpha-1) * ( exp(
 
 ////*************  5)BANKS ****************************************************************
 
-exp(R_b) = - kappa_kb * ( exp(K_b) / exp(B) - vi ) * (exp(K_b)/exp(B)) ^2  + exp(r_ib) ; // (26) FOC wholesale branch, where r_ib is policy rate
+exp(R_b) = - kappa_kb * ( exp(K_b) / exp(B) - exp(vi) ) * (exp(K_b)/exp(B)) ^2  + exp(r_ib) ; // (26) FOC wholesale branch, where r_ib is policy rate
 
 exp(K_b) * exp(pie) = (1-delta_kb) * exp(K_b(-1)) / exp(eps_K_b) + exp(j_B(-1)) ; // (27) accumulation of bank capital
 
@@ -347,7 +347,7 @@ exp(j_B) = + exp(r_bh)  *  exp(b_h)
            - kappa_d/2  * ( (exp(r_d)/exp(r_d(-1))-1)^2)   * exp(r_d) *exp(d_b) 
            - kappa_be/2 * ( (exp(r_be)/exp(r_be(-1))-1)^2) * exp(r_be)*exp(b_e) 
            - kappa_bh/2 * ( (exp(r_bh)/exp(r_bh(-1))-1)^2) * exp(r_bh)*exp(b_h)
-           - kappa_kb/2 * ( (exp(K_b) / exp(B)  - vi ) ^2) * exp(K_b); //  32
+           - kappa_kb/2 * ( (exp(K_b) / exp(B)  - exp(vi) ) ^2) * exp(K_b); //  32
 
 ////***********  6)RETAILERS **************************************************************
 
@@ -371,7 +371,7 @@ gamma_e * exp(l_id) = gamma_i * exp(l_i);
 exp(h)                   = gamma_p * exp(h_p) + gamma_i * exp(h_i); //
 exp(K)              = gamma_e * exp(k_e); //
 % exp(Y1)             = exp(C) +    1     * (exp(K)-(1-deltak)*exp(K(-1))) + delta_kb * exp(K_b(-1)); //   47
-exp(Y1)             = exp(C) +    1     * (exp(K)-(1-deltak)*exp(K(-1))) ; //   47
+exp(Y1)             = exp(C) +    1     * (exp(K)-(1-deltak)*exp(K(-1))) + 1*(exp(h)-(1-deltah)*exp(h(-1))); //   47
 //exp(Y)            = exp(C) + exp(q_k) * (exp(K)-(1-deltak)*exp(K(-1))) + delta_kb * exp(K_b(-1))
 //                      + (eksi_1*(exp(u)-1) + eksi_2/2*((exp(u)-1)^2))
 //                      + kappa_p/2  * (  exp(pie) - ( exp(pie(-1)) ^ ind_p * piss ^ (1-ind_p) ))^2 * exp(Y)
@@ -401,8 +401,8 @@ exp(eps_y)    = (1-rho_eps_y)  * eps_y_ss      + rho_eps_y  * exp(eps_y(-1))   +
 exp(eps_l)    = (1-rho_eps_l)  * eps_l_ss      + rho_eps_l  * exp(eps_l(-1))   + e_l;
 exp(eps_K_b)  = (1-rho_eps_K_b)*    1          + rho_eps_K_b* exp(eps_K_b(-1)) + e_eps_K_b;
 exp(ee_qh)=  1-rho_ee_qh   *    1          + rho_ee_qh  * exp(ee_qh(-1))   + e_qh;
-%%exp(vi)       = (1- rho_vi)*vi_ss                    + e_vi;
-exp(vi)       = vi_ss                    + e_vi;
+exp(vi)       = (1- rho_vi)*vi_ss                    + e_vi;
+
 
 ////***********  10) AUXILIARY VARIABLES *****************************************************4
 
@@ -424,118 +424,118 @@ end;
 
 
 initval;
-c_p=1.5979;
-h_p=-0.0245631;
-d_p=3.57254;
-l_p=-0.0738612;
-lam_p=-1.5979;
-J_R=0.463875;
-j_B=-1.52859;
-pie_wp=8.32735E-16;
-c_i=-1.0838;
-h_i=-3.71877;
-b_i=1.54706;
-l_i=-0.0189437;
-lam_i=1.0838;
-s_i=-2.78576;
-pie_wi=9.02975E-16;
-I=1.71553;
-q_k=-3.03391E-17;
-c_e=0.667579;
-k_e=4.73146;
-l_pd=-0.0738612;
-l_id=-0.0189437;
-b_ee=3.62249;
-y_e=2.25563;
-lam_e=-0.667579;
-s_e=-4.79487;
-u=-0.57437;
-d_b=3.57254;
-b_h=1.54706;
-b_e=3.62249;
-r_d=-5.59572;
-r_bh=-5.48472;
-r_be=-4.71577;
-R_b=-5.64415;
-K_b=1.87507;
-pie=8.9463E-16;
-x=0.182322;
-C=1.97831;
-Y=2.25563;
-D=3.57254;
-BE=3.62249;
-BH=1.54706;
-B=3.74072;
-w_p=1.24331;
-w_i=-1.00884;
-J_B=-1.52859;
-q_h=5.61245;
-K=4.73146;
-PIW=8.51348E-16;
-r_ib=-5.04529;
-r_k=-2.68162;
-ee_z=-4.57284E-16;
-A_e=-1.35501E-17;
-ee_j=4.21102E-16;
-mk_d=-0.55043;
-mk_be=0.928379;
-mk_bh=0.159427;
-ee_qk=-6.16294E-17;
-m_i=-0.34249;
-m_e=-1.04982;
-eps_y=1.79176;
-eps_l=1.60944;
-eps_K_b=3.75294E-16;
-Y1=2.54867;
-rr_e=0.00834612;
-aux1=0.154796;
-bm=-5.35942;
-spr_b=-5.8648;
-vi=-1.8325;
-interestPol=2.57585;
-interestH=1.65988;
-interestF=3.58119;
-inflation=0.000000000000089463;
-loansH=154.706;
-loansF=362.249;
-output=254.867;
-consumption=197.831;
-investment=171.553;
-deposits=357.254;
-interestDep=1.4855;
-bankcapital=187.507;
-h                 	= 3.496;
-I_h               	=	 -0.192875;
-ee_qh             	=	 0;
+c_p               =1.5979;
+h_p               =-0.0245631;
+d_p               =3.57254;
+l_p               =-0.0738612;
+lam_p             =-1.5979;
+J_R               =0.463875;
+j_B               =-1.52859;
+pie_wp            =8.32735E-16;
+c_i               =-1.0838;
+h_i               =-3.71877;
+b_i               =1.54706;
+l_i               =-0.0189437;
+lam_i             =1.0838;
+s_i               =-2.78576;
+pie_wi            =9.02975E-16;
+I                 =1.71553;
+q_k               =-3.03391E-17;
+c_e               =0.667579;
+k_e               =4.73146;
+l_pd              =-0.0738612;
+l_id              =-0.0189437;
+b_ee              =3.62249;
+y_e               =2.25563;
+lam_e             =-0.667579;
+s_e               =-4.79487;
+u                 =-0.57437;
+d_b               =3.57254;
+b_h               =1.54706;
+b_e               =3.62249;
+r_d               =-5.59572;
+r_bh              =-5.48472;
+r_be              =-4.71577;
+R_b               =-5.64415;
+K_b               =1.87507;
+pie               =8.9463E-16;
+x                 =0.182322;
+C                 =1.97831;
+Y                 =2.25563;
+D                 =3.57254;
+BE                =3.62249;
+BH                =1.54706;
+B                 =3.74072;
+w_p               =1.24331;
+w_i               =-1.00884;
+J_B               =-1.52859;
+q_h               =5.61245;
+K                 =4.73146;
+PIW               =8.51348E-16;
+r_ib              =-5.04529;
+r_k               =-2.68162;
+ee_z              =-4.57284E-16;
+A_e               =-1.35501E-17;
+ee_j              =4.21102E-16;
+mk_d              =-0.55043;
+mk_be             =0.928379;
+mk_bh             =0.159427;
+ee_qk             =-6.16294E-17;
+m_i               =-0.34249;
+m_e               =-1.04982;
+eps_y             =1.79176;
+eps_l             =1.60944;
+eps_K_b           =3.75294E-16;
+Y1                =2.54867;
+rr_e              =0.00834612;
+aux1              =0.154796;
+bm                =-5.35942;
+spr_b             =-5.8648;
+vi                =-1.96053;
+interestPol       =2.57585;
+interestH         =1.65988;
+interestF         =3.58119;
+inflation         =0.000000000000089463;
+loansH            =154.706;
+loansF            =362.249;
+output            =254.867;
+consumption       =197.831;
+investment        =171.553;
+deposits          =357.254;
+interestDep       =1.4855;
+bankcapital       =187.507;
+h                 =5.54525;
+I_h               =0.940083;
+ee_qh             =2.23792E-16;
 end;
 
 resid(1);
 //// COMPUTE THE SS /////
-steady(solve_algo=1);
+steady(solve_algo=4);
 
 
     
 shocks;
 //estimated st.dev.
-var e_z         = 0.0144^2;
-var e_A_e       = 0.0062^2;
-var e_j         = 0.0658^2;
-var e_me        = 0.0034^2;
-var e_mi        = 0.0023^2;
-var e_mk_d      = 0.0488^2;
-var e_mk_bh     = 0.0051^2;
-var e_mk_be     = 0.1454^2;
-var e_qk        = 0.0128^2;
-var e_r_ib      = 0.0018^2;
-var e_y         = 1.0099^2;
-var e_l         = 0.3721^2;
-var e_eps_K_b   = 0.050^2;
-var e_qh = 0.001^2;
-var e_vi = 0.2661^2;
+var e_z         = 0.1611^2;
+var e_A_e       = 0.0964^2;
+var e_j         = 0.4392^2;
+var e_me        = 0.0331^2;
+var e_mi        = 0.0757^2;
+var e_mk_d      = 0.8979^2;
+var e_mk_bh     = 0.0075^2;
+var e_mk_be     = 0.3835^2;
+var e_qk        = 0.2138^2;
+var e_r_ib      = 0.0077^2;
+var e_y         = 1.4149^2;
+var e_l         = 0.3881^2;
+var e_eps_K_b   = 0.1565^2;
+var e_qh = 0.6077^2;
+var e_vi = 0.1102^2;
 end;
 
 // stoch_simul(order=1, irf=20, noprint, nograph) interestPol interestH interestF inflation loansH loansF output consumption investment deposits interestDep bankcapital;
-%stoch_simul(order=1, irf=20, irf_shocks=(e_vi) );
+stoch_simul(order=1, irf=20, irf_shocks=(e_vi) );
 %stoch_simul(order=1, irf=20, irf_shocks=(e_j) );
-%stoch_simul(order=1, irf=20, irf_shocks=(e_r_ib) );
+stoch_simul(order=1, irf=20, irf_shocks=(e_r_ib) );
 stoch_simul(order=1, irf=20, irf_shocks=(e_A_e) );
